@@ -14,7 +14,7 @@ def twoMultiply(number, n):
     return False
 
 
-n = 3 #Number od digits
+n = 3 #Number of digits
 
 for i in range(int(pow(10, 2*(n-1))), int(pow(10, 2*n))):
     if(isPalindrome(i)):
