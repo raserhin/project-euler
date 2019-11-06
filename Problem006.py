@@ -3,9 +3,9 @@ Easy peasy
 
 """
 
-N= 100
-natural_sum=sum((i*i for i in range(1, N+1)))
-sum_squared=sum((i for i in range(1, N + 1)))**2
+N = 100
+natural_sum = sum((i*i for i in range(1, N+1)))
+sum_squared = sum((i for i in range(1, N + 1)))**2
 
 
 print("Sum of squares ={} ".format(natural_sum))

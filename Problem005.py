@@ -1,5 +1,6 @@
 from math import sqrt, floor
 
+
 def isDivisible(number, divisors):
     boolean = True
     for divisor in divisors:
@@ -8,32 +9,32 @@ def isDivisible(number, divisors):
     return boolean
 
 
-
 def isPrime(number):
     if(number % 2 == 0):
         return True
-    for i in range(3, floor(sqrt(number)), 2 ):
+    for i in range(3, floor(sqrt(number)), 2):
         if number % i == 0:
             return True
     return False
 
+
 def lcm(x, y):
-   if x > y:
-       z = x
-   else:
-       z = y
+    if x > y:
+        z = x
+    else:
+        z = y
 
-   while(True):
-       if((z % x == 0) and (z % y == 0)):
-           lcm = z
-           break
-       z += 1
+    while(True):
+        if((z % x == 0) and (z % y == 0)):
+            lcm = z
+            break
+        z += 1
 
-   return lcm
+    return lcm
 
 
 def lcm_list(divisors):
-    _lcm= 1
+    _lcm = 1
     for i in divisors:
         _lcm = lcm(i, _lcm)
     return _lcm
@@ -45,7 +46,3 @@ max_divisor = 20
 divisors = [i for i in range(min_divisor, max_divisor + 1)]
 
 print(lcm_list(divisors))
-
-
-
-
