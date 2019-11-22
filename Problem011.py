@@ -1,5 +1,6 @@
 """
-In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
+In the 20×20 grid below, four numbers along a diagonal
+line have been marked in red.
 
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -24,7 +25,8 @@ In the 20×20 grid below, four numbers along a diagonal line have been marked in
 
 The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 
-What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
+What is the greatest product of four adjacent numbers in the same direction
+(up, down, left, right, or diagonally) in the 20×20 grid?
 """
 from time import time
 
@@ -83,7 +85,7 @@ max_value = 0
 
 for row in range(len(grid)):
     for column in range(len(grid)):
-        print("Row: {}, Column: {}".format(row, column))
+        print(f"Row: {row}, Column: {column}")
 
         if column + 3 < len(grid):
             right = grid[row][column:column+4]
@@ -100,7 +102,7 @@ for row in range(len(grid)):
                 max_value = current_value
 
             print(f'Below[{current_value}]: -> {below}')
-        
+
         if row + 3 < len(grid) and column + 3 < len(grid):
             right_diagonal = [grid[row + i][column + i] for i in range(4)]
             current_value = mul_array(right_diagonal)
@@ -116,4 +118,5 @@ for row in range(len(grid)):
                 max_value = current_value
 
             print(f'Left-diagonal[{current_value}]: -> {left_diagonal}')
+
 print(max_value)
