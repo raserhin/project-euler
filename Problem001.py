@@ -13,7 +13,7 @@ def is_divisible(number, pair):
     return False
 
     # More pythonic way to get this info although less readable
-    return all((number % i for i in pair))
+   # return all((number % i for i in pair)) # (Not Reachable)
 
 
 start_time = time.time()
@@ -30,8 +30,8 @@ print("The time spent {:.6f} to find the result {}".format(
 def sum_of_numbers(i):
     return int(i*(i+1)/2)
 
-
+start_time = time.time()
 result = sum_of_numbers((N-1) // 3) * 3 + 5 * \
     sum_of_numbers((N-1) // 5) - 15 * sum_of_numbers((N-1)//15)
-
+final_time = time.time()
 print(f"The time spent with the fastest method {final_time - start_time:.6f} to find the result {result}")

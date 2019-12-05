@@ -81,11 +81,12 @@ def mul_array(array):
     return result
 
 
+start_time = time()
 max_value = 0
 
 for row in range(len(grid)):
     for column in range(len(grid)):
-        print(f"Row: {row}, Column: {column}")
+        # print(f"Row: {row}, Column: {column}")
 
         if column + 3 < len(grid):
             right = grid[row][column:column+4]
@@ -93,7 +94,7 @@ for row in range(len(grid)):
             if current_value > max_value:
                 max_value = current_value
 
-            print(f'Right[{current_value}]: -> {right}')
+            # print(f'Right[{current_value}]: -> {right}')
 
         if row + 3 < len(grid):
             below = [grid[row + i][column] for i in range(4)]
@@ -101,7 +102,7 @@ for row in range(len(grid)):
             if current_value > max_value:
                 max_value = current_value
 
-            print(f'Below[{current_value}]: -> {below}')
+            # print(f'Below[{current_value}]: -> {below}')
 
         if row + 3 < len(grid) and column + 3 < len(grid):
             right_diagonal = [grid[row + i][column + i] for i in range(4)]
@@ -109,7 +110,7 @@ for row in range(len(grid)):
             if current_value > max_value:
                 max_value = current_value
 
-            print(f'Right-diagonal[{current_value}]: -> {right_diagonal}')
+            # print(f'Right-diagonal[{current_value}]: -> {right_diagonal}')
 
         if row + 3 < len(grid) and column - 3 >= 0:
             left_diagonal = [grid[row + i][column - i] for i in range(4)]
@@ -117,6 +118,7 @@ for row in range(len(grid)):
             if current_value > max_value:
                 max_value = current_value
 
-            print(f'Left-diagonal[{current_value}]: -> {left_diagonal}')
+            # print(f'Left-diagonal[{current_value}]: -> {left_diagonal}')
 
-print(max_value)
+final_time = time()
+print(f"Result value {max_value} found in {final_time-start_time:.6f}s")

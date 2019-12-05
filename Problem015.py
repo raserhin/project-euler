@@ -1,7 +1,14 @@
-from math import factorial
+"""
+Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner.
 
-n = 20
+
+How many such routes are there through a 20×20 grid?
+"""
+
+from math import factorial, floor
+
+n = 3
 m = 2 * n - 1
 
-result = 2 * factorial(m) / factorial(m - n) / factorial(n)
+result = floor(2 * factorial(m) / factorial(m - n) / factorial(n))
 print(result)

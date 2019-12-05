@@ -12,8 +12,8 @@ from time import time
 
 def get_triplet(N=1000):
 
-    for a in range(1, 1000):
-        for b in range(a, 1000):
+    for a in range(1, 999):
+        for b in range(a, 999):
             c = 1000 - a - b
             if a*a+b*b == c*c:
                 return a, b, c
