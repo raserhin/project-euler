@@ -126,8 +126,7 @@ start_time = time()
 
 while len(puzzle_input) > 1:
     tmp = puzzle_input.pop()
-    puzzle_input[-1] = [value+tmp[i] if value+tmp[i] > value+tmp[i+1]
-                        else value+tmp[i+1] for i, value in enumerate(puzzle_input[-1])]
-
+    puzzle_input[-1] = [max(value+tmp[i], value+tmp[i+1])
+                        for i, value in enumerate(puzzle_input[-1])]
 final_time = time()
 print(f"The result {puzzle_input[0][0]} has been found in {final_time - start_time:.6f}")

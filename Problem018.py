@@ -32,7 +32,7 @@ NOTE: As there are only 16384 routes, it is possible to solve this problem by tr
 from time import time
 
 puzzle_input = \
-"""\
+    """\
 75
 95 64
 17 47 82
@@ -57,8 +57,9 @@ start_time = time()
 
 while len(puzzle_input) > 1:
     tmp = puzzle_input.pop()
-    puzzle_input[-1] = [value+tmp[i] if value+tmp[i] > value+tmp[i+1]
-                        else value+tmp[i+1] for i, value in enumerate(puzzle_input[-1])]
+    puzzle_input[-1] = [max(value+tmp[i], value+tmp[i+1])
+                        for i, value in enumerate(puzzle_input[-1])]
 
 final_time = time()
-print(f"The result {puzzle_input[0][0]} has been found in {final_time - start_time:.6f}")
+print(
+    f"The result {puzzle_input[0][0]} has been found in {final_time - start_time:.6f}")
