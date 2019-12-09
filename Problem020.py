@@ -8,11 +8,11 @@ Find the sum of the digits in the number 100!
 """
 
 from math import factorial, floor
+from time import time 
 
 n = 100
+start_time = time()
+result = sum(list(map(int, str(floor(factorial(n))))))
+final_time = time()
 
-result = 0
-for i in str(floor(factorial(n))):
-    result += int(i)
-
-print(result)
+print(f"Found the result {result} in {final_time - start_time:.6f}s")
