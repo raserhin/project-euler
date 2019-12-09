@@ -11,28 +11,24 @@ from math import sqrt, floor
 from time import time
 
 
-def divisors(x):
-    divisors_list = []
-    for i in [i for i in range(1, floor(sqrt(x)) + 1) if x % i == 0]:
-        divisors_list.append(i)
-        divisors_list.append(x // i)
-
-    divisors_list.sort()
-    return set(divisors_list)
+def get_divisors(x):
+    divisors = {1}
+    for i in [i for i in range(2, floor(sqrt(x))) if x % i == 0]:
+        divisors.update([i, x//i])
+    return divisors
 
 
-def are_amicable(x, y):
-    return sum(divisors(x)) == y and sum(divisors(y)) == x
-# TODO: Optimize this code
+result = 0
+N = 10_000
+start_time = time()
+for i in range(1, N + 1):
+    target = sum(get_divisors(i))
+    if i < target and i == sum(get_divisors(target)):
+        result+= i+target
+        print(i, target, result)
 
-N = 10000
-array = []
-start = time()
-for i in range(1, N):
-    if i % 50 == 0:
-        print("\r", i, "Tiempo de momento {}".format(
-            time() - start), array, end="")
-    for j in range(1, i):
-        if i != j and are_amicable(i, j):
-            array.append(i)
-            array.append(j)
+final_time = time()    
+
+print(f"Found the result {result} in {final_time - start_time:.6f}s")
+    
+    
