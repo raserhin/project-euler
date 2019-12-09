@@ -23,7 +23,7 @@ def divisors(x):
 
 def are_amicable(x, y):
     return sum(divisors(x)) == y and sum(divisors(y)) == x
-
+# TODO: Optimize this code
 
 N = 10000
 array = []

@@ -6,9 +6,12 @@ How many such routes are there through a 20×20 grid?
 """
 
 from math import factorial, floor
+from time import time
 
-n = 3
+n = 20
 m = 2 * n - 1
 
+start_time = time()
 result = floor(2 * factorial(m) / factorial(m - n) / factorial(n))
-print(result)
+final_time = time()
+print(f"The result {result} has been found in {final_time-start_time:.6f}s")

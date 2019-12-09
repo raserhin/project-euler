@@ -111,4 +111,4 @@ start_time = time()
 result = sum(list(map(int,numbers_input.split())))
 final_time = time()
 
-print(f"The result {str(result)[:10]} has been found in {final_time-start_time:.6f}")
+print(f"The result {str(result)[:10]} has been found in {final_time-start_time:.6f}s")
