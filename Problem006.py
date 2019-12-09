@@ -12,7 +12,7 @@ Find the difference between the sum of the squares of the first one hundred natu
 
 N = 100
 natural_sum = sum((i*i for i in range(1, N+1)))
-sum_squared = sum((i for i in range(1, N + 1)))**2
+sum_squared = (N*(N+1) //2)**2
 
 
 print("Sum of squares ={} ".format(natural_sum))
