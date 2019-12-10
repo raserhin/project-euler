@@ -8,18 +8,18 @@ Find the sum of all numbers, less than one million, which are palindromic in bas
 from time import time
 
 
-def is_pandigital(i):
+def is_palindrom(i):
     return str(i) == str(i)[::-1]
 
 
-def is_both_pandigital(i):
-    return is_pandigital(i) and is_pandigital(bin(i)[2:])
+def is_both_palindrom(i):
+    return is_palindrom(i) and is_palindrom(bin(i)[2:])
 
 
 N = int(1e6)
 
 start = time()
-result = [i for i in range(1, N + 1) if is_both_pandigital(i)]
+result = [i for i in range(1, N + 1) if is_both_palindrom(i)]
 
 print("The result {} has been found in {:.6f}s".format(
     sum(result), time() - start))
