@@ -6,10 +6,7 @@ What is the sum of the digits of the number 21000?
 from time import time 
 number = 2**1000
 
-start_time = time()
-
 result = sum(int(i) for i in str(number))
 
-final_time = time()
-print(f"The result {result} has been found in {final_time-start_time:.6f}s")
+print(result)
 

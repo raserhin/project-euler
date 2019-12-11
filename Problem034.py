@@ -16,5 +16,4 @@ start_time = time()
 result = [i for i in range(3, 50_000) if is_curious(i) ]
 final_time = time()
 
-print(result)
-print(f"The result {sum(result)} has been found in {final_time - start_time:.6f}s")
+print(sum(result))

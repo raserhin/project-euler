@@ -37,10 +37,9 @@ def get_divisors(x: int) -> Set[int]:
     divisors = set()
     if x < 4:
         return {1, x}
-    for i in range(1, ceil(sqrt(x))):
-        if x % i == 0:
-            divisors.add(i)
-            divisors.add(x//i)
+    for  i in (i for i in range(1, ceil(sqrt(x))) if x % i == 0):
+        divisors.add(i) 
+        divisors.add(x//i)
     return divisors
 
 
@@ -49,8 +48,6 @@ def get_triangle(num_divisors=5):
         if len(get_divisors(i)) > num_divisors:
             return i
 
-start_time = time()
 result = get_triangle(num_divisors=500)
-final_time = time()
-print(f"The result {result} has been found in {final_time-start_time:.6f}s")
+print(result)
 

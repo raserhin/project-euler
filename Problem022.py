@@ -19,4 +19,4 @@ input_data.sort()
 result = sum(sum(alpha_position[letter]  for letter in word) * (i+1)  for i, word in enumerate(input_data))
 final_time = time()
 
-print(f"Found the result {result} in {final_time - start_time:.6f}s")
+print(result)

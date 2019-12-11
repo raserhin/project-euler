@@ -15,4 +15,4 @@ start_time = time()
 result = sum(list(map(int, str(floor(factorial(n))))))
 final_time = time()
 
-print(f"Found the result {result} in {final_time - start_time:.6f}s")
+print(result)

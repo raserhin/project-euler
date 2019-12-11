@@ -21,4 +21,4 @@ for a in range(2, N+1):
     result.update([a**b for b in range(2, N+1)])
 final_time = time()
 
-print(f"The result {len(result)} has been found in {final_time - start_time:.6f}")
+print(len(result))

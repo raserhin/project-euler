@@ -31,7 +31,8 @@ def collatz_sequence(n):
 
 collatz_map = {}
 MAX = 1_000_000
-start_time = time()
+
+
 max_value = 0
 result = 0
 for i in range(MAX // 2, MAX ):
@@ -39,7 +40,6 @@ for i in range(MAX // 2, MAX ):
     if current > max_value:
         result = i
         max_value = current
-final_time = time()
 
-print(
-    f"The result {result} [{max_value}] has been found in {final_time - start_time:.6f}s")
+
+print(result)

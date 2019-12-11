@@ -14,14 +14,17 @@ from math import sqrt, floor
 
 N = 1000
 
-lookup_table = {}
+lookup_table = [0]*(N+1)
 for a in range(1, N):
     for b in range(a, N):
         c = sqrt(a*a+b*b)
         if c == floor(c):
-            lookup_table[a+b+floor(c)] += 1
+            c = floor(c)
+            p= a+b+c
+            if p < N:
+                lookup_table[p] += 1
 
-print(lookup_table)
+print(lookup_table.index(max(lookup_table)))
 
 
 

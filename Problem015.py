@@ -14,4 +14,4 @@ m = 2 * n - 1
 start_time = time()
 result = floor(2 * factorial(m) / factorial(m - n) / factorial(n))
 final_time = time()
-print(f"The result {result} has been found in {final_time-start_time:.6f}s")
+print(result)

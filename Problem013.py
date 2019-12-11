@@ -106,9 +106,6 @@ numbers_input = """37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
 
-
-start_time = time()
 result = sum(list(map(int,numbers_input.split())))
-final_time = time()
 
-print(f"The result {str(result)[:10]} has been found in {final_time-start_time:.6f}s")
+print(str(result)[:10])

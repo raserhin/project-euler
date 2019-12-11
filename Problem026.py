@@ -34,8 +34,5 @@ def recurring_cycle_length(divisor: int, dividend: int = 1):
 
 
 N = 1000
-start_time = time()
-result = max([recurring_cycle_length(i) for i in range(1, N)])
-final_time = time()
-
-print(f"The result {result} has been found in {final_time - start_time:.6f}")
+result = max([(recurring_cycle_length(i), i) for i in range(1, N)])
+print(result[1])

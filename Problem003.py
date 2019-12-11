@@ -9,7 +9,5 @@ from time import time
 
 
 n = 600851475143
-start_time = time()
 factors = primefactors(n)
-final_time = time()
-print(f"The result {factors[-1]} has been found in {final_time-start_time:.6f}s")
+print(factors[-1])

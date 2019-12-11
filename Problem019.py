@@ -46,4 +46,4 @@ start_time = time()
 result = sundays(1901, 2000)
 final_time = time()
 
-print(f"The result {result} has been found in {final_time-start_time:.6f}s")
+print(result)

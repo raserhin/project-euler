@@ -18,4 +18,4 @@ N=1000
 pa = "".join([eng.number_to_words(i) for i in range(1, N+1)]).replace("-", "").replace( " ", "")
 final_time = time()
 
-print(f"Found the result {len(pa)} in {final_time - start_time:.6f}s")
+print(len(pa))

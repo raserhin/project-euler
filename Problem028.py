@@ -11,14 +11,9 @@ It can be verified that the sum of the numbers on the diagonals is 101.
 
 What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?
 """
-from time import time
 
 N = 1001
 
-start_time = time()
-
 result = sum((4*n*n - 6*(n-1) for n in range(3, N+1, 2)), 1)
 
-final_time = time()
-
-print(f"The result {result} has been found in {final_time - start_time:.6f}")
+print(result)

@@ -23,5 +23,4 @@ start_time = time()
 a, b, c = get_triplet()
 elapsed = time() - start_time
 
-print(f"The found triplet is {a}, {b}, {c}.")
-print(f"Result: {a*b*c} found in {elapsed:.6f}s ")
+print(a*b*c)

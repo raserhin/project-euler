@@ -38,4 +38,4 @@ is_not_sum = [i for i in range(1, N+1) if not is_sum_abundant(i, lookup_abundant
 result = sum(is_not_sum)
 final_time = time()
 
-print(f"The result {result} has been found in {final_time - start_time:.6f}")
+print(result)

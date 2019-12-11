@@ -46,4 +46,4 @@ for i, term in enumerate(fibonacci()):
     
 final_time = time()
 
-print(f"The result {result} has been found in {final_time - start_time:.6f}")
+print(result)

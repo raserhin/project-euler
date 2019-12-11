@@ -120,5 +120,5 @@ for row in range(len(grid)):
 
             # print(f'Left-diagonal[{current_value}]: -> {left_diagonal}')
 
-final_time = time()
-print(f"Result value {max_value} found in {final_time-start_time:.6f}s")
+
+print(max_value)

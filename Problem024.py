@@ -13,13 +13,10 @@ from math import factorial
 digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 Nth = 1_000_000 - 1
 
-start_time = time()
 result = []
 while len(digits) > 0:
     new_digit = Nth // factorial(len(digits)-1)
     Nth %= factorial(len(digits) - 1)
     result.append(digits.pop(new_digit))
-final_time = time()
 
-
-print(f"The result {result} has been found in {final_time-start_time:.6f}s")
+print("".join(str(i) for i in result))

@@ -27,8 +27,6 @@ def prime_generator(N=10):
 
 
 
-start_time = time()
-
 lookup_prime = prime_generator(1_000_000)
 N = 1000
 max_n = 0
@@ -42,5 +40,4 @@ for b in (i for i in range(-N+1, N, 2) if abs(i) in lookup_prime):
             max_n = n
             result= a*b
 
-final_time = time()
-print(f"The result {result} has been found in {final_time - start_time:.6f}")
+print(result)

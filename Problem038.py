@@ -25,4 +25,4 @@ a= [(i, 9 // (floor(log10(i)) + 1))  for i in range(1,10_000) if is_pandigital(i
 result = [  "".join(str(x*i) for i in range(1, n+1)) for x, n in a]
 
 final_time = time()
-print(f"The result {max(result)} has been found in {final_time - start_time:.6f}s")
+print(max(result))

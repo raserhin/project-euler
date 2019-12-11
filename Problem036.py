@@ -19,7 +19,6 @@ def is_both_palindrom(i):
 N = int(1e6)
 
 start = time()
-result = [i for i in range(1, N + 1) if is_both_palindrom(i)]
+result = sum([i for i in range(1, N + 1) if is_both_palindrom(i)])
 
-print("The result {} has been found in {:.6f}s".format(
-    sum(result), time() - start))
+print(result)

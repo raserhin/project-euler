@@ -23,4 +23,4 @@ result = sum(_result)
 final_time = time()
 
 
-print(f"The result {result} has been found in {final_time - start_time:.6f}")
+print(result)

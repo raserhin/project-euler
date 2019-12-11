@@ -35,4 +35,4 @@ result = [i for i in lookup_prime if log10(i) > 1 and str(
     i)[-1] in ("37") and str(i)[0] in ("2357") and is_truncable(i)]
 final_time = time()
 
-print(f"The result {sum(result)} has been found in {final_time - start_time:.6f}s")
+print(sum(result))

@@ -59,12 +59,10 @@ while i < len(list_numbers) - num_adjecent_numbers:
     current_value = reduce(lambda x, y: x*y, current_list)
     if current_value > max_value:
         max_value = current_value
-        print('New max value found: {} - {}'.format(current_value,
-                                                    current_list))
     if current_value == 0:
         skip = current_list.index(0) + 1
         i += skip
     else:
         i += 1
 elapsed = time() - start_time
-print(f"Final result is {max_value} found in {elapsed:.6f}s")
+print(max_value)

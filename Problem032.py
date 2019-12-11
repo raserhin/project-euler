@@ -30,5 +30,4 @@ for a in [_ for _ in range(100) if "0" not in str(_) and is_sub_pandigital(_)]:
             result.add(a*b)
 final_time = time()
 
-
-print(f"The result {sum(result)} has been found in {final_time - start_time:.6f}s")
+print(sum(result))

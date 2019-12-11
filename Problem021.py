@@ -25,10 +25,9 @@ for i in range(1, N + 1):
     target = sum(get_divisors(i))
     if i < target and i == sum(get_divisors(target)):
         result+= i+target
-        print(i, target, result)
 
 final_time = time()    
 
-print(f"Found the result {result} in {final_time - start_time:.6f}s")
+print(result)
     
     
