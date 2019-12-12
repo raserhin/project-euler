@@ -55,7 +55,6 @@ def get_digit(n):
     number = offset // num_digits + \
         (10**(num_digits-1) if (num_digits - 1) else 0)
     _i = (offset - 1) % num_digits
-    print(number)
     return int(str(number)[_i])
 
 

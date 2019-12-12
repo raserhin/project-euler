@@ -15,7 +15,7 @@ def sum_of_numbers(i):
     
     Equivalent to ``sum(num for num in range(i+1))``
     """
-    return int(i*(i+1)/2)
+    return i*(i+1)//2
 
 start_time = time.time()
 result = sum_of_numbers((N-1) // 3) * 3 + 5 * \
