@@ -28,7 +28,13 @@ def prime_generator(N=10):
     return [i for i, is_prime in enumerate(sieve) if is_prime]
 
 
-n = 9
+
+"""
+Being n the number of digits, it cannot be 9 neither 8.
+9*10/2 = 45 # Divisible by 3
+8*9/2 = 36  # Divisible by 3
+"""
+n = 7
 lookup_prime = prime_generator(floor(sqrt(10**(n-1)) + 1))
 
 
